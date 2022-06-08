@@ -15,11 +15,7 @@ module.exports = {
       birthDate: {
         allowNull: false,
         type: Sequelize.STRING,
-        field: 'birthDate',
-      },
-      age: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
+        field: 'birth_date',
       },
     });
   },
