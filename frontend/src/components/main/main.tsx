@@ -2,12 +2,15 @@ import React from 'react';
 import { UsersTable } from '../usersTable/usersTable';
 import { MainSTL } from './mainSTL';
 import api from '../../services/api';
+import { useFetch } from '../../services/useFetch';
 
 export function Main(): any {
-  
+  const { data } = useFetch(`users?page=0`);
   return (
     <MainSTL>
-      <UsersTable id={1} date='03/11/1994' age={27} name='Lucas' key={1} />
+      { data && data?.models?.data.map((element) => (
+        <UsersTable id={element?.id} date={element?.birthDate} age={element?.age} name={element?.name} key={element?.id} />
+      )) }
     </MainSTL>
   );
 }
