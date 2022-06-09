@@ -19,6 +19,7 @@ export const HeaderSTL = styled.header`
     color: white;
     font-family: 'Poppins';
     margin-top: -20px;
+    cursor: default;
   }
 
   .bottomBar {
