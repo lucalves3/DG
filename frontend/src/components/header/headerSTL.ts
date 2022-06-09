@@ -59,21 +59,23 @@ export const HeaderSTL = styled.header`
 
   .PipeBar {
   height: 50px;
+  padding: 0.5px;
   margin: 0 5px 0 5px;
   background-color: #b8fc1c;
   border: 1px solid #b8fc1c;
+  border-radius: 2px;
   transition: 1s;
   }
 
   .PipeBar:hover, a:hover {
     transition: 1s;
     margin: 0 15px 0 15px;
-
   }
 
   .PipeBar:hover {
     background-color: red;
     border: 1px solid red;
+    transform: rotate(30deg)
   }
 
   @keyframes shake {
