@@ -1,12 +1,9 @@
-import { useContext } from 'react';
 import useSWR from 'swr';
 import api from './api';
 import Swal from 'sweetalert2';
 import produce from 'immer';
-import { Context } from '../context/context';
 
 export function useFetch(url, refresh) {
-  const { redirect, setAlterCompany, setSelectedCompany } = useContext(Context);
 
   const { data, error, mutate } = useSWR(
     url,

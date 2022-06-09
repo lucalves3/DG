@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import { UsersTable } from '../usersTable/usersTable';
 import { MainSTL } from './mainSTL';
-import api from '../../services/api';
 import { useFetch } from '../../services/useFetch';
 
 export function Main(): any {
@@ -9,6 +7,7 @@ export function Main(): any {
 
   return (
     <MainSTL>
+      <button>Adicionar</button>
       <div className="tagName">
       <h2>Excluir</h2>
         <h2>Nome</h2>

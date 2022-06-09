@@ -1,25 +1,15 @@
 import { UsersTableSTL } from './usersTableSTL';
 import { ITable } from '../../interfaces/interfaces';
-import { FC, useContext, useState } from 'react';
-import { Context } from '../../context/context';
+import { FC } from 'react';
 import api from '../../services/api';
 import { mutate } from 'swr';
 import Swal from 'sweetalert2';
 
 export const UsersTable: FC<ITable> = ({ id, name, date, age }) => {
-  const [check, setCheck] = useState([]);
+  // url fixa para mutação da primeira pagina
   const urlToMutate = `users?page=0`;
 
-  // const handleCheck = (id: any, check: any): void => {
-  //   const array = [];
-  //   if (check.includes(id) === false) {
-  //     array.push(id)
-  //     setCheck(array)
-  //   }
-  //   if (check.includes(id) === true) {
-  //     setCheck(check.filter((e) => e !== id));
-  //   }
-  // };
+  // função para deletar o item selecionado
   const handleDelete = async (id: any) => {
     try {
       await api.delete('users/' + id);
