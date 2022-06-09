@@ -24,12 +24,21 @@ export function Main(): any {
               try {
                 await api.post('/users', values);
                 Swal.fire({
+                  icon: 'success',
                   title: 'Usuário cadastrado com sucesso!',
                   text: 'Observe o mutate da rota',
                   timer: 4000,
                   closeButtonAriaLabel: 'Ok'
                 }).then(() => mutate('users?page=0'));
-              } catch (error) {}
+              } catch (error) {
+                Swal.fire({
+                  icon: 'error',
+                  title: `${error.response.data.message}`,
+                  text: 'Tente criar um usuário com nome diferente, essa validação veio do backend!!!',
+                  timer: 4000,
+                  closeButtonAriaLabel: 'Ok'
+                })
+              }
               ;
             }}
             enableReinitialize
