@@ -3,8 +3,6 @@ import trash from '../../images/trash.svg';
 
 export const MainSTL = styled.main`
   background-color: #41436a;
-  /* width: 100vw;
-height: 100vh; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -16,7 +14,10 @@ height: 100vh; */
     justify-content: space-evenly;
     flex-direction: row;
     width: 80%;
-    /* margin-left: 20%; */
+  }
+
+  .addUser {
+    transition: 1s;
   }
 
   .buttonDelete {
