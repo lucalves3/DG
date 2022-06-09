@@ -13,10 +13,13 @@ export function Main(): any {
 
   return (
     <MainSTL>
-      <button onClick={() => setGetFormik(true)}>Adicionar</button>
+      { !getFormik ? 
+      <button className='buttonCallFormik' onClick={() => setGetFormik(true)}>Adicionar</button>
+      : <></>
+    }
       {getFormik ? (
         <section className="addUser">
-          <button onClick={() => setGetFormik(false)}>X</button>
+          <button className='buttonClose' onClick={() => setGetFormik(false)}>X</button>
           <Formik
             // validationSchema={Schema}
             initialValues={{ name: '', birthDate: '' }}
@@ -27,7 +30,7 @@ export function Main(): any {
                   icon: 'success',
                   title: 'Usuário cadastrado com sucesso!',
                   text: 'Observe o mutate da rota',
-                  timer: 4000,
+                  timer: 5000,
                   closeButtonAriaLabel: 'Ok'
                 }).then(() => mutate('users?page=0'));
               } catch (error) {
@@ -35,7 +38,7 @@ export function Main(): any {
                   icon: 'error',
                   title: `${error.response.data.message}`,
                   text: 'Tente criar um usuário com nome diferente, essa validação veio do backend!!!',
-                  timer: 4000,
+                  timer: 8000,
                   closeButtonAriaLabel: 'Ok'
                 })
               }
@@ -53,9 +56,9 @@ export function Main(): any {
               <Form>
                 <div className="modal">
                   <label className="cards">
-                    <span className="span-label-formik-contri">Nome</span>
+                    <span className="spanFormik">Nome</span>
                     <Field
-                      className="input-formik-contri"
+                      className="inputFormik"
                       onBlur={handleChange('name')}
                       name="name"
                       type="text"
@@ -69,11 +72,11 @@ export function Main(): any {
                 </div>
                 <div className="modal">
                   <label className="cards">
-                    <span className="span-label-formik-contri">
+                    <span className="spanFormik">
                       Data de Nascimento
                     </span>
                     <Field
-                      className="input-formik-contri"
+                      className="inputFormik"
                       name="birthDate"
                       onBlur={handleChange('birthDate')}
                       type="text"
@@ -85,7 +88,7 @@ export function Main(): any {
                     />
                   </label>
                 </div>
-                <button type="submit" className="modal-detail">
+                <button type="submit" className="buttonSubmit">
                   ADICIONAR
                 </button>
               </Form>

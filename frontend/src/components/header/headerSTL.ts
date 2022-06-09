@@ -23,7 +23,7 @@ export const HeaderSTL = styled.header`
   }
 
   .bottomBar {
-    background-color: #b8fc1c;
+    background-color: cyan;
     border-radius: 10px;
     margin-top: -30px;
     width: 100%;
@@ -34,8 +34,9 @@ export const HeaderSTL = styled.header`
   }
 
   .bottomBar:hover {
-    background-color: red;
+    background-color: #b8fc1c;
     transition: 1s;
+    background-image: linear-gradient(to right, cyan, cyan, #b8fc1c);
   }
 
   .profileImg {
@@ -62,8 +63,8 @@ export const HeaderSTL = styled.header`
   height: 50px;
   padding: 0.5px;
   margin: 0 5px 0 5px;
-  background-color: #b8fc1c;
-  border: 1px solid #b8fc1c;
+  background-color: cyan;
+  border: 1px solid cyan;
   border-radius: 2px;
   transition: 1s;
   }
@@ -74,8 +75,8 @@ export const HeaderSTL = styled.header`
   }
 
   .PipeBar:hover {
-    background-color: red;
-    border: 1px solid red;
+    background-color: cyan;
+    border: 1px solid cyan;
     transform: rotate(30deg)
   }
 
