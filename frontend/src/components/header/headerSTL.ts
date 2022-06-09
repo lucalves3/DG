@@ -54,13 +54,26 @@ export const HeaderSTL = styled.header`
     color: white;
     font-family: 'Poppins';
     text-decoration: none;
+    transition: 1s;
   }
 
   .PipeBar {
   height: 50px;
+  margin: 0 5px 0 5px;
   background-color: #b8fc1c;
   border: 1px solid #b8fc1c;
-  margin: 0 10px 0 10px
+  transition: 1s;
+  }
+
+  .PipeBar:hover, a:hover {
+    transition: 1s;
+    margin: 0 15px 0 15px;
+
+  }
+
+  .PipeBar:hover {
+    background-color: red;
+    border: 1px solid red;
   }
 
   @keyframes shake {
