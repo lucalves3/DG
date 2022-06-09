@@ -11,6 +11,13 @@ export function Main(): any {
   const { data } = useFetch(`users?page=0`);
   const [getFormik, setGetFormik] = useState(false);
 
+  const calculateAge = (date: string): number => {
+    const birthDate = new Date(date)
+    let difference = Date.now() - birthDate.getTime()
+    let age = new Date(difference); 
+    return Math.abs(age.getUTCFullYear() - 1970);
+  }
+
   return (
     <MainSTL>
       { !getFormik ? 
@@ -79,7 +86,7 @@ export function Main(): any {
                       className="inputFormik"
                       name="birthDate"
                       onBlur={handleChange('birthDate')}
-                      type="text"
+                      type="date"
                     />
                     <ErrorMessage
                       name="birthDate"
@@ -109,7 +116,7 @@ export function Main(): any {
           <UsersTable
             id={e?.id}
             date={e?.birthDate}
-            age={e?.age}
+            age={calculateAge(e?.birthDate)}
             name={e?.name}
             key={e?.id}
           />
