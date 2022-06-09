@@ -53,6 +53,7 @@ export const HeaderSTL = styled.header`
   a {
     color: white;
     font-family: 'Poppins';
+    text-decoration: none;
   }
 
   .PipeBar {
