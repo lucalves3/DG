@@ -2,6 +2,7 @@ import { UsersTable } from '../usersTable/usersTable';
 import { MainSTL } from './mainSTL';
 import { useFetch } from '../../services/useFetch';
 import { useState } from 'react';
+import { format } from 'date-fns'
 import { Field, Form, Formik, ErrorMessage } from 'formik';
 import api from '../../services/api';
 import { mutate } from 'swr';
@@ -16,7 +17,7 @@ export function Main(): any {
       const birthDate = new Date(date)
       let difference = Date.now() - birthDate.getTime()
       let age = new Date(difference); 
-      return Math.abs(age.getUTCFullYear() - 1970);
+      return (Math.abs(age.getUTCFullYear() - 1970));
     }
     return "Data Inválida"
   }
@@ -33,7 +34,7 @@ export function Main(): any {
             initialValues={{ name: '', birthDate: '' }}
             onSubmit={async (values) => {
               try {
-                await api.post('/users', values);
+                await api.post('/users', {name: values.name , birthDate: format(new Date(values.birthDate), 'dd/MM/yyyy')});
                 Swal.fire({
                   icon: 'success',
                   title: 'Usuário cadastrado com sucesso!',
