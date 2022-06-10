@@ -27,7 +27,14 @@ export const MainSTL = styled.main`
     margin-top: 30px;
     width: 400px;
     height: 200px;
+    position: fixed;
+    box-shadow: 0 0 10em cyan;
     transition: 1s;
+  }
+
+  .addUser:hover {
+    transition: 1s;
+    border: 2px dashed cyan;
   }
 
   .buttonSubmit {
@@ -48,7 +55,7 @@ export const MainSTL = styled.main`
 
   .buttonCallFormik {
     width: 200px;
-    margin: 20px 50px 20px 0;
+    margin-top: 5px;
     border: none;
     background-color: cyan;
     cursor: pointer;
@@ -86,11 +93,6 @@ export const MainSTL = styled.main`
     font-size: 14px;
     margin-bottom: 5px;
     margin-top: 5px;
-  }
-
-  .addUser:hover {
-    transition: 1s;
-    border: 2px dashed cyan;
   }
 
   .col-3 {

@@ -16,6 +16,7 @@ export const HeaderSTL = styled.header`
   }
 
   h1 {
+    width: 100px;
     color: white;
     font-family: 'Poppins';
     margin-top: -20px;
@@ -26,7 +27,8 @@ export const HeaderSTL = styled.header`
     background-color: cyan;
     border-radius: 10px;
     margin-top: -30px;
-    width: 100%;
+    margin-left: 50px;
+    width: 150px;
     height: 10px;
     animation: shake 5s ease infinite both;
     transform-origin: 50% 50%;
