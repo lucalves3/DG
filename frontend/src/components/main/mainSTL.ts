@@ -73,9 +73,14 @@ export const MainSTL = styled.main`
     margin: -15px -350px 0 0;
   }
 
+  h2 {
+    margin: -20px 0 0 0;
+  }
+
   .inputFormik {
     background-color: #eff0f6;
     color: #14142b;
+    padding-left: 3px;
     width: 98%;
     font-size: 16px;
     border-radius: 12px;
@@ -128,7 +133,7 @@ export const MainSTL = styled.main`
     height: 20px;
   }
 
-  h2 {
+  h3 {
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 18px;

@@ -39,7 +39,7 @@ export const UsersTable: FC<ITable> = ({ id, name, date, age }) => {
       {getFormik ? (
         <section className="addUser">
           <button className='buttonClose' onClick={() => setGetFormik(false)}>X</button>
-          <h2>ATUALIZAR USUARIO</h2>
+          <h2>CADASTRAR USUARIO</h2>
           <Formik
             initialValues={{ name: data?.model?.data?.name, birthDate: data?.model?.data?.birthDate }}
             onSubmit={async (values) => {

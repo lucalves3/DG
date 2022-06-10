@@ -27,6 +27,7 @@ export function Main(): any {
       {getFormik ? (
         <section className="addUser">
           <button className='buttonClose' onClick={() => setGetFormik(false)}>X</button>
+          <h2>ATUALIZAR USUARIO</h2>
           <Formik
             // validationSchema={Schema}
             initialValues={{ name: '', birthDate: '' }}
@@ -106,9 +107,9 @@ export function Main(): any {
         <></>
       )}
       <div className="tagName">
-        <h2 className="col-3">Nome</h2>
-        <h2 className="col-4">Data de Aniversário</h2>
-        <h2 className="col-5">Idade Atual</h2>
+        <h3 className="col-3">Nome</h3>
+        <h3 className="col-4">Data de Aniversário</h3>
+        <h3 className="col-5">Idade Atual</h3>
       </div>
       {data &&
         data?.models?.data.map((e, index) => (
