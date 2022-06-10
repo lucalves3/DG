@@ -27,7 +27,7 @@ export function Main(): any {
       {getFormik ? (
         <section className="addUser">
           <button className='buttonClose' onClick={() => setGetFormik(false)}>X</button>
-          <h2>ATUALIZAR USUARIO</h2>
+          <h2>ADICIONAR USUARIO</h2>
           <Formik
             // validationSchema={Schema}
             initialValues={{ name: '', birthDate: '' }}

@@ -45,3 +45,4 @@ npm start
 # Detalhes importantes sobre o projeto
 * **Funções de middlewares foram documentadas**
 * **A API possui paginação com máximo de 15 objetos para cada página**
+* **CRUD completo tanto no backend quanto no frontend**
