@@ -39,7 +39,7 @@ export function Main(): any {
                   text: 'Observe o mutate da rota',
                   timer: 5000,
                   closeButtonAriaLabel: 'Ok'
-                }).then(() => mutate('users?page=0'));
+                }).then(() => mutate('users?page=0')).then(() => setGetFormik(false));
               } catch (error) {
                 Swal.fire({
                   icon: 'error',
