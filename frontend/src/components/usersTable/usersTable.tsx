@@ -10,7 +10,6 @@ import { useFetch } from '../../services/useFetch';
 export const UsersTable: FC<ITable> = ({ id, name, date, age }) => {
   const [getFormik, setGetFormik] = useState(false);
   const { data } = useFetch('/users/'+ id)
-  console.log(data?.model?.data)
 
   // url fixa para mutação da primeira pagina
   const urlToMutate = `users?page=0`;

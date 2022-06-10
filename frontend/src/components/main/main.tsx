@@ -11,11 +11,14 @@ export function Main(): any {
   const { data } = useFetch(`users?page=0`);
   const [getFormik, setGetFormik] = useState(false);
 
-  const calculateAge = (date: string): number => {
-    const birthDate = new Date(date)
-    let difference = Date.now() - birthDate.getTime()
-    let age = new Date(difference); 
-    return Math.abs(age.getUTCFullYear() - 1970);
+  const calculateAge = (date: string): number | string => {
+    if (date.length) {
+      const birthDate = new Date(date)
+      let difference = Date.now() - birthDate.getTime()
+      let age = new Date(difference); 
+      return Math.abs(age.getUTCFullYear() - 1970);
+    }
+    return "Data Inválida"
   }
 
   return (

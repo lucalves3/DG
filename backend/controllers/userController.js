@@ -57,9 +57,6 @@ const UpdateUser =
     const { name, birthDate } = req.body;
     try {
       const { id } = req.params;
-      // encontra se ja existe um usuario cadastrado com esse nome
-      const findUser = await User.findAll({ where: { name } })
-      if (findUser.length === 0) {
         const [updateUser] = await User.update(
           {
             name,
@@ -73,8 +70,7 @@ const UpdateUser =
           return res
           .status(200)
           .json({ message: 'Usuário atualizado com sucesso!' });
-        }
-        res.status(403).json({ message: 'Já existe um usuário com esse nome, tente outro!' })
+
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
