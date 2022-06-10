@@ -75,6 +75,7 @@ export const MainSTL = styled.main`
 
   h2 {
     margin: -20px 0 0 0;
+    font-size: 18px;
   }
 
   .inputFormik {

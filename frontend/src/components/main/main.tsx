@@ -20,10 +20,7 @@ export function Main(): any {
 
   return (
     <MainSTL>
-      { !getFormik ? 
       <button className='buttonCallFormik' onClick={() => setGetFormik(true)}>Adicionar</button>
-      : <></>
-    }
       {getFormik ? (
         <section className="addUser">
           <button className='buttonClose' onClick={() => setGetFormik(false)}>X</button>
