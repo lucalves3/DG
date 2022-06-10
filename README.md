@@ -12,6 +12,14 @@
 * Cors
 * Dotenv
 # 
+
+# Exemplo de arquivo .env para o backend
+```
+MYSQL_USER=root
+MYSQL_PASSWORD=senha_mysql
+MYSQL_DATABASE=DGSOLUTIONS
+HOSTNAME='127.0.0.1'
+```
 # Comandos para rodar o projeto na sua máquina
 
 
