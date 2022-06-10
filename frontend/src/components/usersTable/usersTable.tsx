@@ -6,13 +6,7 @@ import { mutate } from 'swr';
 import Swal from 'sweetalert2';
 
 export const UsersTable: FC<ITable> = ({ id, name, date, age }) => {
-  const sizes = {
-    '--col-2': '35%',
-    '--col-3': '25%',
-    '--col-4': '18%',
-    '--col-5': '15%',
-    '--switch': '10%',
-  };
+
   // url fixa para mutação da primeira pagina
   const urlToMutate = `users?page=0`;
 

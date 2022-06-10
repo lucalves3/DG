@@ -10,13 +10,6 @@ import Swal from 'sweetalert2';
 export function Main(): any {
   const { data } = useFetch(`users?page=0`);
   const [getFormik, setGetFormik] = useState(false);
-  const sizes = {
-    '--col-2': '35%',
-    '--col-3': '25%',
-    '--col-4': '18%',
-    '--col-5': '15%',
-    '--switch': '10%',
-  };
 
   const calculateAge = (date: string): number => {
     const birthDate = new Date(date)
