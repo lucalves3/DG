@@ -118,7 +118,6 @@ export const MainSTL = styled.main`
     padding-left: 30px;
     box-sizing: border-box;
     text-align: start;
-
   }
 
   .buttonDelete {

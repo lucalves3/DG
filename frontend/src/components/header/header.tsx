@@ -14,9 +14,21 @@ export function Header(): any {
         <div className="bottomBar" />
       </div>
       <section>
-        <a href='https://github.com/lucalves3/DG' target="_blank" rel="noreferrer">Github</a>
+        <a
+          href="https://github.com/lucalves3/DG"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
         <div className="PipeBar" />
-        <a href="https://www.linkedin.com/in/franciscolucasoliveiraalves/" target="_blank" rel="noreferrer">Linkedin</a>
+        <a
+          href="https://www.linkedin.com/in/franciscolucasoliveiraalves/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Linkedin
+        </a>
       </section>
     </HeaderSTL>
   );

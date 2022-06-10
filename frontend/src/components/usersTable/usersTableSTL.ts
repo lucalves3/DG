@@ -20,8 +20,8 @@ export const UsersTableSTL = styled.section`
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-		border-radius: 10px;
-		padding: 0 70px 0 70px;
+    border-radius: 10px;
+    padding: 0 70px 0 70px;
   }
   .divFalse {
     width: 90%;
@@ -31,8 +31,8 @@ export const UsersTableSTL = styled.section`
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-		border-radius: 10px;
-		padding: 0 70px 0 70px;
+    border-radius: 10px;
+    padding: 0 70px 0 70px;
   }
 
   .attModal {

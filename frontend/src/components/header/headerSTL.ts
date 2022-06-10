@@ -62,16 +62,17 @@ export const HeaderSTL = styled.header`
   }
 
   .PipeBar {
-  height: 50px;
-  padding: 0.5px;
-  margin: 0 5px 0 5px;
-  background-color: cyan;
-  border: 1px solid cyan;
-  border-radius: 2px;
-  transition: 1s;
+    height: 50px;
+    padding: 0.5px;
+    margin: 0 5px 0 5px;
+    background-color: cyan;
+    border: 1px solid cyan;
+    border-radius: 2px;
+    transition: 1s;
   }
 
-  .PipeBar:hover, a:hover {
+  .PipeBar:hover,
+  a:hover {
     transition: 1s;
     margin: 0 15px 0 15px;
   }
@@ -79,17 +80,33 @@ export const HeaderSTL = styled.header`
   .PipeBar:hover {
     background-color: cyan;
     border: 1px solid cyan;
-    transform: rotate(30deg)
+    transform: rotate(30deg);
   }
 
   @keyframes shake {
-   0% { transform:translate(0,0) }
-    1.78571% { transform:translate(5px,0) }
-    3.57143% { transform:translate(0,0) }
-    5.35714% { transform:translate(5px,0) }
-    7.14286% { transform:translate(0,0) }
-    8.92857% { transform:translate(5px,0) }
-    10.71429% { transform:translate(0,0) }
-    100% { transform:translate(0,0) }
-}
+    0% {
+      transform: translate(0, 0);
+    }
+    1.78571% {
+      transform: translate(5px, 0);
+    }
+    3.57143% {
+      transform: translate(0, 0);
+    }
+    5.35714% {
+      transform: translate(5px, 0);
+    }
+    7.14286% {
+      transform: translate(0, 0);
+    }
+    8.92857% {
+      transform: translate(5px, 0);
+    }
+    10.71429% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
 `;
