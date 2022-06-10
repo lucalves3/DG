@@ -57,23 +57,43 @@ const UpdateUser =
     const { name, birthDate } = req.body;
     try {
       const { id } = req.params;
-      const [updateUser] = await User.update(
-        {
-          name,
-          birthDate,
-        },
-        { where: { id } },
-      );
-      if (!updateUser) {
-        return res.status(404).json({ message: 'Usuário não encontrado' });
-      }
-      return res
-        .status(200)
-        .json({ message: 'Usuário atualizado com sucesso!' });
+      // encontra se ja existe um usuario cadastrado com esse nome
+      const findUser = await User.findAll({ where: { name } })
+      if (findUser.length === 0) {
+        const [updateUser] = await User.update(
+          {
+            name,
+            birthDate,
+          },
+          { where: { id } },
+          );
+          if (!updateUser) {
+            return res.status(404).json({ message: 'Usuário não encontrado' });
+          }
+          return res
+          .status(200)
+          .json({ message: 'Usuário atualizado com sucesso!' });
+        }
+        res.status(403).json({ message: 'Já existe um usuário com esse nome, tente outro!' })
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
   });
+
+const FindUserById = ('/users/:id', async (req, res) => {
+    try {
+      const { name } = req.body;
+      const { id } = req.params;
+      const updateUser = await User.findByPk(id);
+      if (updateUser) {
+          const objectReturn = ObjectInterface({ previousPage: 0, nextPage: 0 }, updateUser, true);
+          res.status(200).json(objectReturn);
+        }
+      res.status(404).json({message: 'Usuário não encontrado!'})
+    } catch (error) {
+      res.status(500)
+    }
+});
 
 const DeleteUser =
   ('/users/:id',
@@ -93,5 +113,6 @@ module.exports = {
   getAllUsers,
   UpdateUser,
   CreateUser,
+  FindUserById,
   DeleteUser,
 };

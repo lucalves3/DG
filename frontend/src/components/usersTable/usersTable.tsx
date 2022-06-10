@@ -41,7 +41,6 @@ export const UsersTable: FC<ITable> = ({ id, name, date, age }) => {
           <button className='buttonClose' onClick={() => setGetFormik(false)}>X</button>
           <h2>ATUALIZAR USUARIO</h2>
           <Formik
-            // validationSchema={Schema}
             initialValues={{ name: data?.model?.data?.name, birthDate: data?.model?.data?.birthDate }}
             onSubmit={async (values) => {
               try {
@@ -57,7 +56,7 @@ export const UsersTable: FC<ITable> = ({ id, name, date, age }) => {
                 Swal.fire({
                   icon: 'error',
                   title: `${error.response.data.message}`,
-                  text: 'Tente criar um usuário com nome diferente, essa validação veio do backend!!!',
+                  text: 'Tente um nome diferente, essa validação veio do backend!!!',
                   timer: 8000,
                   closeButtonAriaLabel: 'Ok'
                 })
