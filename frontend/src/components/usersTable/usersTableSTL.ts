@@ -7,6 +7,10 @@ export const UsersTableSTL = styled.section`
   justify-content: center;
   flex-direction: row;
 
+  h2 {
+    margin: -20px 0 0 0;
+  }
+
   .divTrue {
     width: 90%;
     display: flex;
@@ -28,6 +32,19 @@ export const UsersTableSTL = styled.section`
     flex-direction: row;
 		border-radius: 10px;
 		padding: 0 70px 0 70px;
+  }
+
+  .attModal {
+    cursor: pointer;
+    border: none;
+    width: 0;
+  }
+
+  .attModal:hover {
+    cursor: pointer;
+    background-color: cyan;
+    color: black;
+    border-radius: 10px;
   }
 
   .col-2 {
