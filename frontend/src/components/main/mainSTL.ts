@@ -31,8 +31,8 @@ export const MainSTL = styled.main`
   }
 
   .buttonSubmit {
-    width: 200px;
-    margin: 20px 0 -30px 75px;
+    width: 180px;
+    margin: 20px 0 0 55px;
     background-color: cyan;
     border: none;
     cursor: pointer;
@@ -93,6 +93,26 @@ export const MainSTL = styled.main`
     border: 2px dashed cyan;
   }
 
+  .col-3 {
+    padding-left: 20px;
+    width: 25%;
+    box-sizing: border-box;
+  }
+
+  .col-4 {
+    width: 30%;
+    padding-left: 30px;
+    box-sizing: border-box;
+  }
+
+  .col-5 {
+    width: 20%;
+    padding-left: 30px;
+    box-sizing: border-box;
+    text-align: start;
+
+  }
+
   .buttonDelete {
     display: block;
     background-image: url(${trash});
@@ -109,6 +129,6 @@ export const MainSTL = styled.main`
   h2 {
     font-family: 'Poppins';
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
   }
 `;

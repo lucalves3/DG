@@ -6,6 +6,13 @@ import { mutate } from 'swr';
 import Swal from 'sweetalert2';
 
 export const UsersTable: FC<ITable> = ({ id, name, date, age }) => {
+  const sizes = {
+    '--col-2': '35%',
+    '--col-3': '25%',
+    '--col-4': '18%',
+    '--col-5': '15%',
+    '--switch': '10%',
+  };
   // url fixa para mutação da primeira pagina
   const urlToMutate = `users?page=0`;
 
@@ -30,10 +37,12 @@ export const UsersTable: FC<ITable> = ({ id, name, date, age }) => {
 
   return (
     <UsersTableSTL>
-      <button className="buttonDelete" onClick={() => handleDelete(id)} />
-      <p>{name}</p>
-      <p>{date}</p>
-      <p>{age}</p>
+      <div className={ id%2 === 0 ? 'divTrue' : 'divFalse' }>
+        <button className="buttonDelete" onClick={() => handleDelete(id)} />
+        <p className='col-3'>{name}</p>
+        <p className='col-4'>{date}</p>
+        <p className='col-5'>{age}</p>
+      </div>
     </UsersTableSTL>
   );
 };

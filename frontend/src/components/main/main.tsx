@@ -10,6 +10,13 @@ import Swal from 'sweetalert2';
 export function Main(): any {
   const { data } = useFetch(`users?page=0`);
   const [getFormik, setGetFormik] = useState(false);
+  const sizes = {
+    '--col-2': '35%',
+    '--col-3': '25%',
+    '--col-4': '18%',
+    '--col-5': '15%',
+    '--switch': '10%',
+  };
 
   const calculateAge = (date: string): number => {
     const birthDate = new Date(date)
@@ -106,10 +113,9 @@ export function Main(): any {
         <></>
       )}
       <div className="tagName">
-        <h2>Excluir</h2>
-        <h2>Nome</h2>
-        <h2>Data de Aniversário</h2>
-        <h2>Idade</h2>
+        <h2 className="col-3">Nome</h2>
+        <h2 className="col-4">Data de Aniversário</h2>
+        <h2 className="col-5">Idade Atual</h2>
       </div>
       {data &&
         data?.models?.data.map((e, index) => (
