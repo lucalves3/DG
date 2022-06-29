@@ -13,7 +13,7 @@ export const MainSTL = styled.main`
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    width: 80%;
+    width: 100%;
   }
 
   .addUser {
@@ -55,6 +55,7 @@ export const MainSTL = styled.main`
 
   .buttonCallFormik {
     width: 200px;
+    margin-left: -40px;
     margin-top: 5px;
     border: none;
     background-color: cyan;
@@ -101,23 +102,31 @@ export const MainSTL = styled.main`
     margin-top: 5px;
   }
 
-  .col-3 {
-    padding-left: 20px;
-    width: 25%;
+  .col3 {
+    width: 33.33%;
+    text-align: center;
     box-sizing: border-box;
+    padding-right: 50px;
   }
 
-  .col-4 {
-    width: 30%;
-    padding-left: 30px;
+  .col4 {
+    width: 33.33%;
+    text-align: center;
     box-sizing: border-box;
+    padding-right: 50px;
   }
 
-  .col-5 {
-    width: 20%;
-    padding-left: 30px;
+  .col5 {
+    width: 33.33%;
+    text-align: center;
     box-sizing: border-box;
-    text-align: start;
+    padding-right: 50px;
+  }
+
+  .col6 {
+    width: var(--col-6);
+    box-sizing: border-box;
+    padding-right: 50px;
   }
 
   .buttonDelete {

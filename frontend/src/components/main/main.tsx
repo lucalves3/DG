@@ -17,6 +17,8 @@ export function Main(): any {
       const birthDate = new Date(date);
       let difference = Date.now() - birthDate.getTime();
       let age = new Date(difference);
+      console.log(Math.abs(age.getUTCFullYear() - 1970))
+      console.log(birthDate)
       return Math.abs(age.getUTCFullYear() - 1970);
     }
     return 'Data Inválida';
@@ -113,9 +115,9 @@ export function Main(): any {
         <></>
       )}
       <div className="tagName">
-        <h3 className="col-3">Nome</h3>
-        <h3 className="col-4">Data de Aniversário</h3>
-        <h3 className="col-5">Idade Atual</h3>
+        <h3 className="col3" style={{marginLeft: '90px'}}>Nome</h3>
+        <h3 className="col4" style={{marginRight: '0px'}}>Data de Nascimento</h3>
+        <h3 className="col5" style={{marginRight: '80px'}}>Idade Atual</h3>
       </div>
       {data &&
         data?.models?.data.map((e, index) => (

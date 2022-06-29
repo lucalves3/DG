@@ -48,28 +48,23 @@ export const UsersTableSTL = styled.section`
     border-radius: 10px;
   }
 
-  .col-2 {
-    margin-left: 20px;
-    width: 35%;
-    display: flex;
-    box-sizing: border-box;
-    padding-right: 50px;
-  }
-
   .col-3 {
-    width: 25%;
+    width: 33.33%;
+    text-align: center;
     box-sizing: border-box;
     padding-right: 50px;
   }
 
   .col-4 {
-    width: 18%;
+    width: 33.33%;
+    text-align: center;
     box-sizing: border-box;
     padding-right: 50px;
   }
 
   .col-5 {
-    width: 15%;
+    width: 33.33%;
+    text-align: center;
     box-sizing: border-box;
     padding-right: 50px;
   }
